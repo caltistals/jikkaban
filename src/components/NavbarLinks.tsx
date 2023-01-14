@@ -38,8 +38,8 @@ export const NavbarLink: FC<NavbarLinkProps> = ({
           borderRadius: theme.radius.sm,
           color: theme.colors.gray[7],
           "&:hover": {
-            backgroundColor: theme.colors.teal[0],
-            color: theme.colors.teal,
+            backgroundColor: theme.colors.cyan[0],
+            color: theme.colors.cyan,
           },
         })}
         onClick={() => setOpened(false)}
