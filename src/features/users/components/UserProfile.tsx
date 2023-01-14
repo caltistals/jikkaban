@@ -8,6 +8,7 @@ import {
   Group,
   Card,
 } from "@mantine/core";
+import { IconUser } from "@tabler/icons";
 
 import useLogout from "../../auth/hooks/useLogout";
 
@@ -17,9 +18,12 @@ const UserProfile = () => {
   return (
     <Container size={500}>
       <Card withBorder shadow="sm" radius="sm">
-        <Title order={2} align="center" color="dark.3" mb="lg">
-          ユーザー情報
-        </Title>
+        <Group position="center">
+          <IconUser size={25} />
+          <Title order={2} align="center" color="dark.3">
+            ユーザー情報
+          </Title>
+        </Group>
         <Stack>
           {user && user.avatarColor && user.displayName ? (
             <>

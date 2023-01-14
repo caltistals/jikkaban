@@ -13,7 +13,7 @@ import {
   ActionIcon,
   Skeleton,
 } from "@mantine/core";
-import { IconClipboard, IconClipboardCheck } from "@tabler/icons";
+import { IconClipboard, IconClipboardCheck, IconUsers } from "@tabler/icons";
 import LoadingSkeleton from "../../../components/LoadingSkeleton";
 import useGroupInformation from "../hooks/useGroupInformation";
 
@@ -23,9 +23,12 @@ const GroupInformation = () => {
   return (
     <Container size={500}>
       <Card withBorder shadow="sm" radius="sm">
-        <Title order={2} align="center" color="dark.3">
-          グループ情報
-        </Title>
+        <Group position="center">
+          <IconUsers size={25} />
+          <Title order={2} align="center" color="dark.3">
+            グループ情報
+          </Title>
+        </Group>
         <Stack>
           {isLoading && <LoadingSkeleton quantity={2} my={40} />}
           {groupData ? (

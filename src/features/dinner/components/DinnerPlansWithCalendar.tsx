@@ -14,7 +14,7 @@ import { DinnerPlan } from "./DinnerPlan";
 import "dayjs/locale/ja";
 import { Calendar } from "@mantine/dates";
 import dayjs from "dayjs";
-import { IconAlertCircle, IconPlus } from "@tabler/icons";
+import { IconAlertCircle, IconCalendarEvent, IconPlus } from "@tabler/icons";
 import { CreateDinnerPlanModal } from "./CreateDinnerPlanModal";
 import useReadDinnerPlans from "../hooks/useReadDinnerPlans";
 import LoadingSkeleton from "../../../components/LoadingSkeleton";
@@ -28,9 +28,12 @@ export const DinnerPlansWithCalendar = () => {
       <Container fluid>
         <Card withBorder shadow="sm" radius="sm">
           <Card.Section withBorder inheritPadding py="xs" mb="xs">
-            <Title order={3} color="dark.3" weight={700}>
-              晩御飯の予定
-            </Title>
+            <Group spacing="xs">
+              <IconCalendarEvent size={25} />
+              <Title order={3} color="dark.3" weight={700}>
+                晩御飯の予定
+              </Title>
+            </Group>
             <Text color="dark.2">{dayjs(date).format("YYYY年MM月DD日")}</Text>
           </Card.Section>
           <Center mb="xl">
