@@ -42,8 +42,8 @@ export const Layout: FC<PropsWithChildren> = (props) => {
           p="xs"
           styles={(theme) => ({
             root: {
-              backgroundColor: theme.colors.cyan[4],
-              color: "white",
+              backgroundColor: "white",
+              color: "#22b8cf",
             },
           })}
         >
@@ -56,10 +56,13 @@ export const Layout: FC<PropsWithChildren> = (props) => {
                 onClick={() => setOpened((o) => !o)}
                 size="sm"
                 mr="xl"
-                color="white"
+                color="#22b8cf"
               />
             </MediaQuery>
-            <Link to="/app" style={{ textDecoration: "none", color: "white" }}>
+            <Link
+              to="/app"
+              style={{ textDecoration: "none", color: "#22b8cf" }}
+            >
               <Group spacing="xs">
                 <IconPinned size={30} />
                 <Text size="xl" weight={700}>
