@@ -1,6 +1,7 @@
 import {
   Accordion,
   ActionIcon,
+  Button,
   Card,
   Center,
   Container,
@@ -82,7 +83,7 @@ export const DinnerPlansWithCalendar = () => {
             setOpened={setOpened}
             date={dayjs(date).format("YYYY-MM-DD")}
           />
-          <ActionIcon
+          {/* <ActionIcon
             style={{
               position: "fixed",
               width: "60px",
@@ -96,7 +97,19 @@ export const DinnerPlansWithCalendar = () => {
             color="cyan"
           >
             <IconPlus size={30} />
-          </ActionIcon>
+          </ActionIcon> */}
+          <Button
+            color="cyan"
+            onClick={() => setOpened(true)}
+            leftIcon={<IconPlus />}
+            style={{
+              position: "fixed",
+              bottom: "40px",
+              right: "40px",
+            }}
+          >
+            予定を追加
+          </Button>
         </Card>
       </Container>
     </>
