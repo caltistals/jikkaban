@@ -2,12 +2,9 @@ import {
   Accordion,
   ActionIcon,
   Card,
-  Center,
   Container,
   Group,
-  Loader,
   Text,
-  ThemeIcon,
   Title,
 } from "@mantine/core";
 import { DinnerPlan } from "./DinnerPlan";
@@ -49,7 +46,6 @@ export const DinnerPlans = () => {
                   },
                 }}
                 chevronPosition="right"
-                variant="contained"
               >
                 {dinnerPlans.map((dinnerPlan) => (
                   <DinnerPlan
