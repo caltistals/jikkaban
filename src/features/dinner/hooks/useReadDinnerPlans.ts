@@ -15,30 +15,40 @@ const useReadDinnerPlans = () => {
   const { db } = useContext(FirebaseContext);
   const { user } = useContext(UserContext);
   useEffect(() => {
-    (async () => {
-      setIsLoading(true);
-      if (user && user.groupId) {
-        try {
-          const data = await readDinnerPlans(
-            db as Firestore,
-            user.groupId,
-            dayjs(date).format("YYYY-MM-DD")
-          );
-          if (data?.length) setDinnerPlans(data);
-          else setDinnerPlans(null);
-        } catch (error) {
-          showNotification({
-            message: "予定の取得に失敗しました",
-            color: "red",
-          });
-          setDinnerPlans(null);
-        }
-      }
-      setIsLoading(false);
-    })();
+    handleReadDinnerPlan();
   }, [date]);
 
-  return { dinnerPlans, isLoading, opened, setOpened, date, setDate };
+  const handleReadDinnerPlan = async () => {
+    setIsLoading(true);
+    if (user && user.groupId) {
+      try {
+        const data = await readDinnerPlans(
+          db as Firestore,
+          user.groupId,
+          dayjs(date).format("YYYY-MM-DD")
+        );
+        if (data?.length) setDinnerPlans(data);
+        else setDinnerPlans(null);
+      } catch (error) {
+        showNotification({
+          message: "予定の取得に失敗しました",
+          color: "red",
+        });
+        setDinnerPlans(null);
+      }
+    }
+    setIsLoading(false);
+  };
+
+  return {
+    dinnerPlans,
+    isLoading,
+    opened,
+    setOpened,
+    date,
+    setDate,
+    handleReadDinnerPlan,
+  };
 };
 
 export default useReadDinnerPlans;
