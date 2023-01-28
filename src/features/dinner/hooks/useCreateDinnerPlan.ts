@@ -15,6 +15,7 @@ type FormValue = {
 
 const useCreateDinnerPlan = (
   setOpened: React.Dispatch<boolean>,
+  fetchData: () => Promise<void>,
   date: string
 ) => {
   const { db } = useContext(FirebaseContext);
@@ -52,6 +53,7 @@ const useCreateDinnerPlan = (
           color: "green",
         });
         setOpened(false);
+        fetchData();
       }
     } catch (error) {
       showNotification({
