@@ -9,7 +9,7 @@ import { findUser } from "../features/auth/api/find-user";
 import { FirebaseContext, UserContext } from "../contexts";
 
 const FirebaseApp: FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [user, setUser] = useState<UserType | null>(null);
+  const [user, setUser] = useState<UserType | null | undefined>(undefined);
   const auth = getAuth(app);
   const db = getFirestore(app);
 
