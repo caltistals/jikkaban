@@ -17,12 +17,19 @@ import useCreateDinnerPlan from "../hooks/useCreateDinnerPlan";
 type Props = {
   opened: boolean;
   setOpened: React.Dispatch<boolean>;
+  fetchData: () => Promise<void>;
   date: string;
 };
 
-export const CreateDinnerPlanModal = ({ opened, setOpened, date }: Props) => {
+export const CreateDinnerPlanModal = ({
+  opened,
+  setOpened,
+  date,
+  fetchData,
+}: Props) => {
   const { isLoading, form, handleSubmit, handleClose } = useCreateDinnerPlan(
     setOpened,
+    fetchData,
     date
   );
   return (

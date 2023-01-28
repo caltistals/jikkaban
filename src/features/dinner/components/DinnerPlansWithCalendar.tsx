@@ -20,8 +20,15 @@ import useReadDinnerPlans from "../hooks/useReadDinnerPlans";
 import LoadingSkeleton from "../../../components/LoadingSkeleton";
 
 export const DinnerPlansWithCalendar = () => {
-  const { dinnerPlans, isLoading, opened, setOpened, date, setDate } =
-    useReadDinnerPlans();
+  const {
+    dinnerPlans,
+    isLoading,
+    opened,
+    setOpened,
+    date,
+    setDate,
+    handleReadDinnerPlan,
+  } = useReadDinnerPlans();
 
   return (
     <>
@@ -85,6 +92,7 @@ export const DinnerPlansWithCalendar = () => {
             opened={opened}
             setOpened={setOpened}
             date={dayjs(date).format("YYYY-MM-DD")}
+            fetchData={handleReadDinnerPlan}
           />
           {/* <ActionIcon
             style={{

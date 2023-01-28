@@ -15,6 +15,7 @@ type FormValue = {
 
 const useCreateDinnerPlan = (
   setOpened: React.Dispatch<boolean>,
+  fetchData: () => Promise<void>,
   date: string
 ) => {
   const { db } = useContext(FirebaseContext);
