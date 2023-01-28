@@ -53,6 +53,7 @@ const useCreateDinnerPlan = (
           color: "green",
         });
         setOpened(false);
+        fetchData();
       }
     } catch (error) {
       showNotification({
