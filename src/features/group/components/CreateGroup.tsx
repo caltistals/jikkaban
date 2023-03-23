@@ -52,17 +52,19 @@ const CreateGroup = () => {
               グループを作成
             </Title>
             <TextInput
+              size="md"
               label="グループ名"
               placeholder="グループ名を入力"
               {...form.getInputProps("groupName")}
             />
-            <Button type="submit" color="cyan" fullWidth>
+            <Button size="md" type="submit" color="cyan" fullWidth>
               グループを作成
             </Button>
           </Stack>
         </form>
         <Divider my="sm" label="または" labelPosition="center" />
         <Button
+          size="md"
           color="cyan"
           variant="subtle"
           onClick={() => {

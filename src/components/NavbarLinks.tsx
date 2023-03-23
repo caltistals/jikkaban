@@ -23,7 +23,6 @@ type NavbarLinksProps = {
 
 export const NavbarLink: FC<NavbarLinkProps> = ({
   icon,
-  color,
   label,
   href,
   setOpened,
@@ -46,7 +45,7 @@ export const NavbarLink: FC<NavbarLinkProps> = ({
       >
         <Group>
           {icon}
-          <Text size="md">{label}</Text>
+          <Text size="lg">{label}</Text>
         </Group>
       </UnstyledButton>
     </Link>
@@ -55,13 +54,13 @@ export const NavbarLink: FC<NavbarLinkProps> = ({
 
 const linkData = [
   {
-    icon: <IconHome size={20} />,
+    icon: <IconHome size={25} />,
     color: "blue",
     label: "ホーム",
     href: "/app",
   },
   {
-    icon: <IconCalendarEvent size={20} />,
+    icon: <IconCalendarEvent size={25} />,
     color: "orange",
     label: "晩御飯の予定",
     href: "/app/dinner",
@@ -73,13 +72,13 @@ const linkData = [
   //   href: "/app/parcel",
   // },
   {
-    icon: <IconUsers size={20} />,
+    icon: <IconUsers size={25} />,
     color: "green",
     label: "グループ情報",
     href: "/app/group/information",
   },
   {
-    icon: <IconUser size={20} />,
+    icon: <IconUser size={25} />,
     color: "violet",
     label: "ユーザー情報",
     href: "/app/user",

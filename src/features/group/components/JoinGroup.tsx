@@ -59,6 +59,7 @@ const JoinGroup = () => {
                     </Text>
                   </Group>
                   <Button
+                    size="md"
                     color="cyan"
                     onClick={async () => {
                       if (db && user && setUser) {
@@ -77,6 +78,7 @@ const JoinGroup = () => {
                   </Button>
                 </Stack>
                 <Button
+                  size="md"
                   color="cyan"
                   variant="subtle"
                   onClick={() => {
@@ -102,16 +104,18 @@ const JoinGroup = () => {
               >
                 <Stack>
                   <TextInput
+                    size="md"
                     label="グループID"
                     placeholder="グループIDを入力"
                     {...form.getInputProps("groupId")}
                   />
-                  <Button type="submit" color="cyan" fullWidth>
+                  <Button size="md" type="submit" color="cyan" fullWidth>
                     参加
                   </Button>
                 </Stack>
                 <Divider my="sm" label="または" labelPosition="center" />
                 <Button
+                  size="md"
                   color="cyan"
                   variant="subtle"
                   onClick={() => {
