@@ -27,7 +27,7 @@ const AccordionLabel: FC<AccordionProps> = ({
     <Group noWrap>
       <Avatar color={avatarColor} radius="xl" size="md" />
       <Text>{username}</Text>
-      <Badge color={badgeColor} size="lg" radius="sm">
+      <Badge color={badgeColor} variant="filled" size="lg" radius="sm">
         {badgeLabel}
       </Badge>
     </Group>
