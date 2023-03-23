@@ -52,12 +52,14 @@ const RegisterForm = () => {
           })}
         >
           <TextInput
+            size="md"
             withAsterisk
             label="メールアドレス"
             placeholder="xxx@example.com"
             {...form.getInputProps("email")}
           />
           <PasswordInput
+            size="md"
             withAsterisk
             label="パスワード"
             placeholder="●●●●●●"
@@ -65,17 +67,19 @@ const RegisterForm = () => {
             {...form.getInputProps("password")}
           />
           <PasswordInput
+            size="md"
             withAsterisk
             label="パスワードの確認"
             placeholder="●●●●●●"
             mt="md"
             {...form.getInputProps("confirmPassword")}
           />
-          <Button type="submit" color="cyan.6" mt="xl" fullWidth>
+          <Button size="md" type="submit" color="cyan.6" mt="xl" fullWidth>
             新規登録
           </Button>
           <Divider my="sm" label="または" labelPosition="center" />
           <Button
+            size="md"
             variant="subtle"
             color="cyan"
             fullWidth

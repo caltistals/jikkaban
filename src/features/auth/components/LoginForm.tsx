@@ -20,23 +20,26 @@ const LoginForm = () => {
       <Paper p="xl" mx="auto" my="lg" withBorder>
         <form onSubmit={handleLogin}>
           <TextInput
+            size="md"
             withAsterisk
             label="メールアドレス"
             placeholder="xxx@example.com"
             {...form.getInputProps("email")}
           />
           <PasswordInput
+            size="md"
             withAsterisk
             label="パスワード"
             placeholder="●●●●●●"
             mt="md"
             {...form.getInputProps("password")}
           />
-          <Button type="submit" color="cyan" mt="xl" fullWidth>
+          <Button type="submit" size="md" color="cyan" mt="xl" fullWidth>
             ログイン
           </Button>
           <Divider my="sm" label="または" labelPosition="center" />
           <Button
+            size="md"
             variant="subtle"
             color="cyan"
             fullWidth
