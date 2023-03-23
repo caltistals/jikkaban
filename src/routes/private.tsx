@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { Navigate, Outlet } from "react-router-dom";
+import { Head } from "../components/Head";
 import { Layout } from "../components/Layout";
 import { UserContext } from "../contexts";
 import { DinnerPlan } from "../features/dinner/components/DinnerPlan";
@@ -22,7 +23,12 @@ const App = () => {
 };
 
 const Home = () => {
-  return <DinnerPlans />;
+  return (
+    <>
+      <Head title="ホーム" />
+      <DinnerPlans />
+    </>
+  );
 };
 
 export const privateRoutes = [
