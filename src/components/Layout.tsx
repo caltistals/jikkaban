@@ -16,13 +16,13 @@ export const Layout: FC<PropsWithChildren> = (props) => {
   const [opened, setOpened] = useState(false);
   return (
     <AppShell
-      padding="md"
+      padding="xs"
       navbarOffsetBreakpoint="sm"
       navbar={
         <Navbar
           hiddenBreakpoint="sm"
           hidden={!opened}
-          width={{ sm: 200, lg: 300 }}
+          width={{ sm: 300, lg: 300 }}
           p="xs"
           styles={(theme) => ({
             root: {
