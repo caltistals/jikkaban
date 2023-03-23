@@ -33,7 +33,7 @@ export const DinnerPlansWithCalendar = () => {
   return (
     <>
       <Container fluid>
-        <Card withBorder shadow="sm" radius="sm">
+        <Card withBorder shadow="sm" radius="sm" mb="xl">
           <Card.Section withBorder inheritPadding py="xs" mb="xs">
             <Group spacing="xs">
               <IconCalendarEvent size={25} />
@@ -53,6 +53,142 @@ export const DinnerPlansWithCalendar = () => {
           </Center>
           <>
             {isLoading && <LoadingSkeleton quantity={2} />}
+            {!isLoading && dinnerPlans ? (
+              <Accordion
+                styles={{
+                  item: {
+                    // styles added to all items
+                    backgroundColor: "#fff",
+
+                    // // styles added to expanded item
+                    // "&[data-active]": {
+                    //   backgroundColor: "#ffd803",
+                    // },
+                  },
+                }}
+                chevronPosition="right"
+              >
+                {dinnerPlans.map((dinnerPlan) => (
+                  <DinnerPlan
+                    dinnerPlan={dinnerPlan}
+                    key={dinnerPlan.user.id}
+                  />
+                ))}
+              </Accordion>
+            ) : (
+              <>
+                {!isLoading && (
+                  <Group>
+                    <ActionIcon variant="transparent">
+                      <IconAlertCircle size={20} />
+                    </ActionIcon>
+                    <Text color="dark.2">予定が登録されていません</Text>
+                  </Group>
+                )}
+              </>
+            )}
+            {!isLoading && dinnerPlans ? (
+              <Accordion
+                styles={{
+                  item: {
+                    // styles added to all items
+                    backgroundColor: "#fff",
+
+                    // // styles added to expanded item
+                    // "&[data-active]": {
+                    //   backgroundColor: "#ffd803",
+                    // },
+                  },
+                }}
+                chevronPosition="right"
+              >
+                {dinnerPlans.map((dinnerPlan) => (
+                  <DinnerPlan
+                    dinnerPlan={dinnerPlan}
+                    key={dinnerPlan.user.id}
+                  />
+                ))}
+              </Accordion>
+            ) : (
+              <>
+                {!isLoading && (
+                  <Group>
+                    <ActionIcon variant="transparent">
+                      <IconAlertCircle size={20} />
+                    </ActionIcon>
+                    <Text color="dark.2">予定が登録されていません</Text>
+                  </Group>
+                )}
+              </>
+            )}
+            {!isLoading && dinnerPlans ? (
+              <Accordion
+                styles={{
+                  item: {
+                    // styles added to all items
+                    backgroundColor: "#fff",
+
+                    // // styles added to expanded item
+                    // "&[data-active]": {
+                    //   backgroundColor: "#ffd803",
+                    // },
+                  },
+                }}
+                chevronPosition="right"
+              >
+                {dinnerPlans.map((dinnerPlan) => (
+                  <DinnerPlan
+                    dinnerPlan={dinnerPlan}
+                    key={dinnerPlan.user.id}
+                  />
+                ))}
+              </Accordion>
+            ) : (
+              <>
+                {!isLoading && (
+                  <Group>
+                    <ActionIcon variant="transparent">
+                      <IconAlertCircle size={20} />
+                    </ActionIcon>
+                    <Text color="dark.2">予定が登録されていません</Text>
+                  </Group>
+                )}
+              </>
+            )}
+            {!isLoading && dinnerPlans ? (
+              <Accordion
+                styles={{
+                  item: {
+                    // styles added to all items
+                    backgroundColor: "#fff",
+
+                    // // styles added to expanded item
+                    // "&[data-active]": {
+                    //   backgroundColor: "#ffd803",
+                    // },
+                  },
+                }}
+                chevronPosition="right"
+              >
+                {dinnerPlans.map((dinnerPlan) => (
+                  <DinnerPlan
+                    dinnerPlan={dinnerPlan}
+                    key={dinnerPlan.user.id}
+                  />
+                ))}
+              </Accordion>
+            ) : (
+              <>
+                {!isLoading && (
+                  <Group>
+                    <ActionIcon variant="transparent">
+                      <IconAlertCircle size={20} />
+                    </ActionIcon>
+                    <Text color="dark.2">予定が登録されていません</Text>
+                  </Group>
+                )}
+              </>
+            )}
             {!isLoading && dinnerPlans ? (
               <Accordion
                 styles={{
@@ -115,8 +251,8 @@ export const DinnerPlansWithCalendar = () => {
             leftIcon={<IconPlus />}
             style={{
               position: "fixed",
-              bottom: "40px",
-              right: "40px",
+              bottom: "15px",
+              right: "32px",
             }}
           >
             予定を追加
